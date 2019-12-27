@@ -1,7 +1,7 @@
 import java.util.*;
 class Linklist
 {
-    node START,ptr,pptr,s,s1;
+    node START,ptr,pptr,s,s1,temp;
     int count=1;
     Linklist()
     {
@@ -340,5 +340,28 @@ class Linklist
         }
         System.out.println(su1);
         System.out.println(su2);
+    }
+    void rotate()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the no of rotation");
+        int x=sc.nextInt();
+        int i=0;
+
+        while(i<x)
+        {
+            ptr=START;
+            while(ptr.link.link!=null)
+                ptr=ptr.link;
+
+            temp=new node();
+            temp.data=ptr.link.data;
+            ptr.link=null;
+            temp.link=START;
+            START=temp;
+
+            i++;
+        }
+        display();
     }
 }
