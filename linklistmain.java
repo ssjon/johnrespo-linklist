@@ -52,6 +52,7 @@ class linklistmain
     System.out.println("enter 12 for swappair");
     System.out.println("enter 13 for find position");
     System.out.println("enter 14 for find balanced");
+    System.out.println("enter 15 for rotate");
 
     System.out.println("enter your choice");
     int x=sc.nextInt();
@@ -106,6 +107,10 @@ class linklistmain
 
     case 14:
     lt.balanced();
+    break;
+    
+    case 15:
+    lt.rotate();
     break;
     }
     }*/
